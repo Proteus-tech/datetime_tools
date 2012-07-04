@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import time
 
 from django.conf import settings
@@ -20,7 +20,7 @@ def string_to_datetime(string_in, format='%Y-%m-%d', sep=0):
     if sep:
         string_in = unicode(string_in)[:sep]
     try:
-        return datetime.datetime.strptime(string_in, format)
+        return datetime.strptime(string_in, format)
     except:
         return None
 

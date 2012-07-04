@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='datetime_tools',
-      version='1.1',
+      version='1.2',
       description='Datetime tools for Django',
       author='Proteus Technologies',
       author_email='team@proteus-tech.com',
