@@ -27,4 +27,7 @@ def string_to_datetime(string_in, format='%Y-%m-%d', sep=0):
 def flexible_isoformat_str2datetime(s):
     parts = s.split('.')
     dt = datetime.strptime(parts[0], "%Y-%m-%dT%H:%M:%S")
-    return dt.replace(microsecond=int(parts[1]))
+    microsecond = 0
+    if len(parts) > 1:
+        microsecond = int(parts[1])
+    return dt.replace(microsecond=microsecond)
