@@ -1,7 +1,8 @@
-from datetime import datetime
-import time
+from datetime import datetime, date
 
 from django.conf import settings
+
+dthandler = lambda obj: obj.isoformat() if isinstance(obj, datetime) or isinstance(obj, date) else None
 
 def convert_json_datetime_string_to_default_format(datetime_string):
     if not datetime_string:
